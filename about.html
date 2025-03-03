@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me - Kaustubh</title>
+    <link rel="stylesheet" href="style.css"> <!-- Linking your existing CSS -->
+    <style>
+        /* Elegant "Old Money" Styling */
+        body {
+            background-color: #f5efe0; /* Soft warm beige background */
+            font-family: "Playfair Display", serif; /* Classy serif font */
+            color: #3e2c1c; /* Rich brown text */
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 60px auto;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.85);
+            border-radius: 10px;
+            box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            font-size: 3rem;
+            font-weight: bold;
+            color: #2e1a0f; /* Dark rich brown */
+            border-bottom: 2px solid #c2a476; /* Gold accent line */
+            display: inline-block;
+            padding-bottom: 5px;
+        }
+
+        p {
+            font-size: 1.3rem;
+            line-height: 1.8;
+            font-weight: 400;
+        }
+
+        strong {
+            color: #5a3d2b; /* Deep brown */
+            font-weight: bold;
+        }
+
+        /* Fancy Initial Animation */
+        .about-section {
+            opacity: 0;
+            transform: translateY(50px);
+            transition: opacity 1s ease-out, transform 1s ease-out;
+        }
+
+        .show-about {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Button Back to Home */
+        .back-button {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 1rem;
+            font-weight: bold;
+            text-decoration: none;
+            background-color: #c2a476; /* Gold */
+            color: #fff;
+            border-radius: 5px;
+            transition: 0.3s ease;
+        }
+
+        .back-button:hover {
+            background-color: #a8875a; /* Darker gold */
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>About Me</h1>
+        <div class="about-section">
+            <p><strong>A brisk and eager learner</strong>, I thrive on precision and detail, blending theoretical depth with hands-on expertise.</p>
+            <p>With a strong foundation in <strong>Artificial Intelligence, Machine Learning, and Deep Learning</strong>, I specialize in <strong>Cloud Computing, Cybersecurity, and Full Stack Web Development.</strong></p>
+            <p>Passionate about crafting <strong>efficient solutions</strong>, I bring a keen analytical mind to every project. <em>Let’s innovate together. 🚀</em></p>
+        </div>
+
+        <a href="index.html" class="back-button">← Back to Home</a>
+    </div>
+
+    <script>
+        // Smooth Reveal Animation
+        document.addEventListener("DOMContentLoaded", function () {
+            const aboutSection = document.querySelector(".about-section");
+
+            function handleScroll() {
+                const sectionPos = aboutSection.getBoundingClientRect().top;
+                const screenPos = window.innerHeight / 1.5;
+
+                if (sectionPos < screenPos) {
+                    aboutSection.classList.add("show-about");
+                }
+            }
+
+            window.addEventListener("scroll", handleScroll);
+            handleScroll(); // Trigger immediately if visible
+        });
+    </script>
+
+</body>
+</html>
