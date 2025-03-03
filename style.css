@@ -1,0 +1,52 @@
+/* Global Styles */
+body {
+    font-family: 'Garamond', serif;
+    background-color: #F5F5DC; /* Cream background */
+    color: #2C3E50; /* Dark blue/green text */
+    margin: 0;
+    padding: 0;
+}
+
+/* Header */
+header {
+    background: #2C3E50; 
+    color: #F5F5DC;
+    text-align: center;
+    padding: 20px 0;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #F5F5DC;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+/* Hero Section */
+.hero {
+    text-align: center;
+    padding: 80px 20px;
+}
+
+.btn {
+    background-color: #2C3E50;
+    color: #F5F5DC;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    display: inline-block;
+}
+
+.btn:hover {
+    background-color: #1A252F;
+}
